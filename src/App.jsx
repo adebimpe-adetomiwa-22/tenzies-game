@@ -12,25 +12,34 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route
-                    path="/tenzies-game"
-                    element={
-                        <ProtectedRoute>
-                            <SharedLayout />
-                        </ProtectedRoute>
-                    }
-                >
-                    <Route index element={<Home />} />
-                    {/* <Route path="login" element={<Login />} /> */}
-                    <Route path="about" element={<About />} />
-                    <Route path="instructions" element={<Instructions />} />
-                    <Route path="leaders-board" element={<LeadersBoard />} />
-                    {/* <Route path="login" element={<Login />} /> */}
+                <Route path="/tenzies-game">
+                    <Route
+                        path=""
+                        element={
+                            <ProtectedRoute>
+                                <SharedLayout />
+                            </ProtectedRoute>
+                        }
+                    >
+                        <Route index element={<Home />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="instructions" element={<Instructions />} />
+                        <Route
+                            path="leaders-board"
+                            element={<LeadersBoard />}
+                        />
+                    </Route>
+                    <Route path="/tenzies-game/login" element={<Login />} />
                 </Route>
-                <Route path="/tenzies-game/login" element={<Login />} />
             </Routes>
         </BrowserRouter>
     );
 }
 
 export default App;
+
+{
+    /* <ProtectedRoute>
+<SharedLayout />
+</ProtectedRoute> */
+}

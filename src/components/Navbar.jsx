@@ -33,7 +33,7 @@ const Navbar = () => {
                     }
                 >
                     <NavLink
-                        to="/tenzies-game/"
+                        to="/tenzies-game"
                         className={({ isActive }) =>
                             isActive ? 'nav--link active' : 'nav--link'
                         }
