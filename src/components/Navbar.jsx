@@ -33,7 +33,7 @@ const Navbar = () => {
                     }
                 >
                     <NavLink
-                        to="/"
+                        to="/tenzies-game/"
                         className={({ isActive }) =>
                             isActive ? 'nav--link active' : 'nav--link'
                         }
@@ -41,7 +41,7 @@ const Navbar = () => {
                         <p>Home</p>
                     </NavLink>
                     <NavLink
-                        to="/about"
+                        to="/tenzies-game/about"
                         className={({ isActive }) =>
                             isActive ? 'nav--link active' : 'nav--link'
                         }
@@ -49,7 +49,7 @@ const Navbar = () => {
                         <p>About</p>
                     </NavLink>
                     <NavLink
-                        to="/instructions"
+                        to="/tenzies-game/instructions"
                         className={({ isActive }) =>
                             isActive ? 'nav--link active' : 'nav--link'
                         }
@@ -57,7 +57,7 @@ const Navbar = () => {
                         <p>Instructions</p>
                     </NavLink>
                     {/* <NavLink
-                        to="/leaders-board"
+                        to="/tenzies-game/leaders-board"
                         className={({ isActive }) =>
                             isActive ? 'nav--link active' : 'nav--link'
                         }
@@ -66,7 +66,7 @@ const Navbar = () => {
                     </NavLink> */}
                     <NavLink
                         onClick={logout}
-                        // to="/leaders-board"
+                        // to="/tenzies-game/leaders-board"
                         className="text-wine-primary tranistion hover:text-wine-tertiary"
                     >
                         <p>Logout</p>
