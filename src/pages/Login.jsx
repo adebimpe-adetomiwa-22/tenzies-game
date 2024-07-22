@@ -20,7 +20,7 @@ const Login = () => {
 
         setFormError(false);
         console.log('ready to submit');
-        navigate('/');
+        navigate('/tenzies-game');
     };
 
     return (
