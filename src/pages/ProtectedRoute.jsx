@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 const ProtectedRoute = ({ children }) => {
     const { user } = useContext(InfoContext);
     if (!user) {
-        return <Navigate to="/login" />;
+        return <Navigate to="/tenzies-game/login" />;
     }
     return children;
 };

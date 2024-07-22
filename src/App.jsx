@@ -27,7 +27,7 @@ function App() {
                     <Route path="leaders-board" element={<LeadersBoard />} />
                     {/* <Route path="login" element={<Login />} /> */}
                 </Route>
-                <Route path="login" element={<Login />} />
+                <Route path="/tenzies-game/login" element={<Login />} />
             </Routes>
         </BrowserRouter>
     );
