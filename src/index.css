@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    .container {
+        @apply p-3;
+        /* @apply lg:px-0; */
+    }
+    /* nav */
+    .nav {
+        @apply bg-wine-secondary  text-wine-primary;
+    }
+    .nav > .container {
+        /* @apply flex justify-between items-center; */
+        @apply grid grid-cols-2 items-center gap-y-7 px-9;
+    }
+    .nav--title .title {
+        @apply text-xl font-bold text-wine-tertiary;
+    }
+    .hamburger {
+        @apply ml-auto cursor-pointer text-lg transition-colors;
+        @apply hover:text-wine-tertiary;
+        @apply md:hidden;
+    }
+    .nav > .container > .nav--links {
+        @apply text-sm transition-all flex flex-col gap-3 items-start border-t border-wine-primary col-span-2 pt-3 border-opacity-50;
+        @apply md:flex-row md:border-none md:pt-0 md:col-span-1 md:gap-5;
+        @apply md:ml-auto;
+    }
+    .nav > .container > .nav--links.active {
+        @apply flex;
+    }
+    .nav > .container > .nav--links.not-active {
+        @apply hidden;
+        @apply md:flex;
+    }
+    .nav--link {
+        @apply transition-colors;
+        @apply hover:text-wine-tertiary;
+    }
+    .nav--link.active {
+        @apply text-wine-tertiary;
+    }
+    /* .nav > .container > .nav--links > .nav--link {
+      @apply transition-colors;
+      @apply hover:text-wine-tertiary;
+  } */
+    /* hero */
+    /*  */
+    .about--title {
+        @apply text-lg font-semibold;
+    }
+    .about--description {
+        @apply text-sm;
+    }
+    /* main */
+    .main {
+        @apply h-96 mt-20;
+    }
+    .main--container {
+        @apply flex flex-col justify-around h-full;
+    }
+    .main--timer {
+        @apply flex justify-end mb-9;
+    }
+    .main--timer.active {
+        @apply flex justify-end items-center gap-2;
+        @apply border-2 border-wine-tertiary w-20 rounded-3xl ml-auto relative overflow-hidden;
+    }
+    .main--timer .timer--icon {
+        @apply absolute left-0 p-2 px-1 bg-wine-tertiary text-white;
+    }
+    .main--timer p {
+        @apply cursor-pointer;
+        @apply bg-transparent text-wine-tertiary px-5 py-0 rounded-3xl transition-colors hover:opacity-90 border-2 border-wine-tertiary;
+        @apply hover:bg-wine-tertiary hover:text-white;
+    }
+    .main--timer p.active {
+        @apply text-wine-tertiary bg-transparent font-semibold p-0 w-12 border-none;
+    }
+    .main--board {
+        @apply flex justify-center items-center;
+    }
+    .artboard .dice {
+        @apply grid grid-cols-5 gap-3;
+    }
+    .die {
+        @apply bg-wine-tertiary cursor-pointer w-10 h-10 rounded-md transition-opacity opacity-80 md:hover:opacity-100 shadow-md shadow-wine-secondary active:shadow-none text-wine-secondary;
+        @apply flex justify-center items-center;
+    }
+    .die.locked {
+        /* @apply bg-wine-tertiary; */
+        @apply opacity-50;
+    }
+    .die p {
+        @apply font-bold text-lg;
+    }
+    .roll-button {
+        /* @apply bg-red-200; */
+        @apply flex justify-center items-center;
+    }
+    .roll-button.active {
+        @apply opacity-100 pointer-events-auto;
+    }
+    .roll-button.not-active {
+        @apply opacity-0 pointer-events-none;
+    }
+    .roll-button button {
+        @apply text-wine-secondary font-semibold drop-shadow-md shadow-wine-secondary shadow-sm bg-wine-tertiary px-7 py-1 rounded-md transition-transform active:scale-90 hover:opacity-90;
+    }
+    .end-time h2 {
+        @apply font-semibold text-xl tracking-widest;
+    }
+    .board {
+        @apply fixed bg-wine-secondary top-0 left-0 w-full h-full z-10 bg-opacity-70 backdrop-blur-sm;
+
+        @apply sm:flex sm:justify-center sm:items-center;
+        /* @apply md:flex md:justify-center md:items-center; */
+    }
+
+    .board .board-wrapper {
+        @apply w-full h-full;
+        @apply sm:w-4/6;
+        @apply md:w-1/2;
+        @apply lg:w-2/5;
+        @apply xl:w-1/3;
+    }
+    /* .board .container {
+
+  } */
+    .board--header {
+        @apply bg-wine-secondary;
+    }
+    .board--header .container {
+        @apply text-white flex items-center gap-5;
+    }
+    .user-icon i {
+        @apply text-xl;
+    }
+    .cancel-board {
+        @apply ml-auto w-5 h-5 flex justify-center items-center cursor-pointer rounded-sm transition hover:bg-gray-600;
+    }
+    .cancel-board i {
+        @apply text-lg;
+    }
+    .start-button {
+        @apply flex justify-center items-center;
+    }
+    .start-button button {
+        @apply bg-green-500 text-white px-7 py-1 rounded-sm transition hover:opacity-90;
+    }
+    .game-info {
+        @apply flex justify-between items-center;
+    }
+    .clear-records-button {
+        @apply bg-red-500 text-white px-3 py-1 rounded-sm text-sm transition md:hover:opacity-90;
+    }
+    .time-finished {
+        @apply flex items-end text-white gap-3;
+    }
+    .time-finished h2 {
+        @apply font-semibold text-base md:text-lg;
+    }
+    .time-finished h3 {
+        @apply font-bold text-2xl;
+    }
+    .former-speed {
+        /* @apply text-white border-t-2 border-white mt-9 pt-3; */
+        @apply text-white mt-9 mb-5;
+    }
+
+    .former-speed-items {
+        @apply border-2 border-white p-2 rounded-md max-h-80;
+    }
+
+    .ex-speed-title {
+        /* @apply text-xl font-semibold mb-5; */
+        @apply text-base md:text-xl font-semibold px-3 py-1 flex gap-3 items-center bg-white text-black rounded-md;
+        @apply text-sm md:text-base;
+    }
+
+    .ex-speed-title i {
+        @apply text-sm md:text-base;
+    }
+
+    .speeds {
+        @apply mt-3;
+    }
+
+    .speeds .time {
+        @apply flex justify-between;
+    }
+
+    .speeds .time p:last-child {
+        @apply mr-7;
+    }
+
+    .speeds .time.current {
+        @apply text-green-500;
+    }
+
+    .login {
+        @apply mt-9;
+    }
+    .login .container {
+        @apply flex justify-center;
+    }
+    .form {
+        @apply w-full h-full;
+        @apply sm:w-4/6;
+        @apply md:w-1/2;
+        @apply lg:w-2/5;
+        @apply xl:w-1/3;
+    }
+    .form-error {
+        @apply bg-wine-primary rounded-sm px-2 py-2 mb-5;
+    }
+    .form-input {
+        @apply flex gap-1 flex-col;
+    }
+    /* .form-input label {
+    } */
+    .form-input input {
+        @apply border border-slate-300 rounded-sm outline-none px-1 py-0.5;
+    }
+    .play-button {
+        @apply bg-wine-tertiary text-white flex items-center gap-3 py-1 justify-center rounded-sm cursor-pointer mt-5 transition;
+        @apply md:hover:opacity-90;
+    }
+
+    .ul-lists {
+        @apply ml-5;
+    }
+
+    .ul-lists li:not(.sub-title) {
+        @apply mb-2 list-disc text-sm;
+    }
+
+    .sub-title {
+        @apply text-lg font-semibold mt-3 mb-1;
+    }
+    .sub-sub-title {
+        @apply text-base font-semibold;
+    }
+
+    /* .clear-records {
+    }
+    .clear-records-button {
+        @apply text-white bg-red-300;
+    } */
+
+    /* .former-speed .time {
+    } */
+    /* .fastest-players {
+        @apply text-white border-t-2 border-white mt-9 pt-3;
+    }
+
+    .player {
+        @apply flex items-center gap-3;
+    } */
+
+    /* .fastest-players .player-name {
+    
+  } */
+}

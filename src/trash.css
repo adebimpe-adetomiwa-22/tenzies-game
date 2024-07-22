@@ -1,0 +1,50 @@
+.main--timer {
+    @apply flex justify-end mb-9;
+}
+.main--timer.active {
+    @apply flex justify-end items-center gap-2;
+    @apply border-2 border-wine-tertiary w-20 rounded-3xl ml-auto relative overflow-hidden;
+    /* @apply grid grid-cols-2 justify-end items-center w-1/5; */
+}
+
+.main--timer .timer--icon {
+    /* @apply text-wine-tertiary; */
+    /* @apply bg-wine-tertiary; */
+    @apply absolute left-0 p-2 px-1 bg-wine-tertiary text-white;
+}
+
+.main--timer p {
+    @apply cursor-pointer;
+    /* @apply bg-wine-tertiary text-white px-6 py-1 rounded-md transition-opacity hover:opacity-90; */
+
+    @apply bg-transparent text-wine-tertiary px-5 py-0 rounded-3xl transition-colors hover:opacity-90 border-2 border-wine-tertiary;
+
+    @apply hover:bg-wine-tertiary hover:text-white;
+
+    /* @apply border-2 border-wine-tertiary bg-transparent text-wine-tertiary font-semibold; */
+}
+
+.main--timer p.active {
+    /* @apply border-2 border-wine-tertiary bg-transparent text-wine-tertiary font-semibold; */
+    @apply text-wine-tertiary bg-transparent font-semibold p-0 w-12 border-none;
+}
+
+.main--timer {
+    /* @apply flex justify-end mb-9;
+    @apply text-wine-tertiary items-center gap-2 font-semibold; */
+    @apply flex justify-end items-center;
+}
+
+.main--timer--cover {
+    @apply px-3 py-0.5 border-2 border-wine-tertiary rounded-sm;
+
+    @apply flex justify-end mb-9;
+    @apply text-wine-tertiary items-center gap-2 font-semibold;
+}
+
+.main--timer i {
+}
+
+.main--timer p {
+    @apply w-12;
+}
